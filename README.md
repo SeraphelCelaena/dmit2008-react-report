@@ -5,7 +5,9 @@ I am going to do a report on a website I frequent everyday: The seelie.me planne
 ### Start with a Mock
 Here is the page I am going to be analyzing.
 <!-- Insert Page Images Here -->
-<img src="./images/mockSource1.png">
+![mockSource1](./images/mockSource1.png)
+![mockSource2](./images/mockSource2.png)
+![mockSource3](./images/mockSource3.png)
 
 Functionality on the page:
 * Filtering based on the day of the week
@@ -32,6 +34,26 @@ If I were to implement this myself I would use a json api that would track chara
 		},
 		"characters": [
 			{
+				"name": "Hu Tao",
+				"element": "Pyro",
+				"current-level": "90/90",
+				"desired-level": "90/90",
+				"talents": {
+					"normal-current-level": 10,
+					"normal-desired-level": 10,
+					"skill-current-level": 10,
+					"skill-desired-level": 10,
+					"burst-current-level": 10,
+					"burst-desired-level": 10,
+				},
+				"weapon-type": "polearm",
+				"weapon": {
+					"name": "Staff of Homa",
+					"current-level": "90/90",
+					"desired-level": "90/90"
+				}
+			},
+			{
 				"name": "Furina",
 				"element": "Hydro",
 				"current-level": "70/80",
@@ -51,35 +73,15 @@ If I were to implement this myself I would use a json api that would track chara
 					"desired-level": "90/90"
 				}
 			},
-			{
-				"name": "Navia",
-				"element": "Geo",
-				"current-level": "1/20",
-				"desired-level": "90/90",
-				"talents": {
-					"normal-current-level": 1,
-					"normal-desired-level": 8,
-					"skill-current-level": 1,
-					"skill-desired-level": 8,
-					"burst-current-level": 1,
-					"burst-desired-level": 8,
-				},
-				"weapon-type": "greatsword",
-				"weapon": {
-					"name": "Considered Judgement",
-					"current-level": "1/20",
-					"desired-level": "80/80"
-				}
-			}
 		],
 		"inventory": {
 			"gold": 3000000,
-			"experience-books": {
+			"experience-books": { // Books to level characters
 				"tier-1": 25,
 				"tier-2": 55,
 				"tier-3": 420
 			},
-			"pure-sacred-dewdrop": {
+			"pure-sacred-dewdrop": { // Furina Weapon Ascension Material
 				"tier-1": 26,
 				"tier-2": 34,
 				"tier-3": 10,
