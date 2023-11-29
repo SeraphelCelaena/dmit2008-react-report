@@ -1,6 +1,6 @@
 # DMIT2008 Report: Thinking in React
 By: Andrew Ng<br>
-I am going to do a report on a website I frequent everyday: The seelie.me planner page for a mock representation on how I assume it will work if I were to try to implement it in React.
+I am going to do a report on a website I frequent everyday: The [Seelie.me](https://seelie.inmagi.com/planner) planner page for a mock representation on how I assume it will work if I were to try to implement it in React.
 
 ### Start with a Mock
 Here is the page I am going to be analyzing.
@@ -36,14 +36,14 @@ If I were to implement this myself I would use a json api that would track chara
 			{
 				"name": "Hu Tao",
 				"element": "Pyro",
-				"current-level": "90/90",
+				"current-level": "80/90",
 				"desired-level": "90/90",
 				"talents": {
-					"normal-current-level": 10,
+					"normal-current-level": 8,
 					"normal-desired-level": 10,
-					"skill-current-level": 10,
+					"skill-current-level": 8,
 					"skill-desired-level": 10,
-					"burst-current-level": 10,
+					"burst-current-level": 8,
 					"burst-desired-level": 10,
 				},
 				"weapon-type": "polearm",
@@ -56,23 +56,43 @@ If I were to implement this myself I would use a json api that would track chara
 			{
 				"name": "Furina",
 				"element": "Hydro",
-				"current-level": "70/80",
-				"desired-level": "90/90",
+				"current-level": "50/60",
+				"desired-level": "80/80",
 				"talents": {
-					"normal-current-level": 1,
+					"normal-current-level": 2,
 					"normal-desired-level": 10,
-					"skill-current-level": 4,
+					"skill-current-level": 6,
 					"skill-desired-level": 10,
-					"burst-current-level": 7,
+					"burst-current-level": 8,
 					"burst-desired-level": 10,
 				},
 				"weapon-type": "sword",
 				"weapon": {
 					"name": "Splendor of Tranquil Waters",
-					"current-level": "60/60",
+					"current-level": "70/70",
 					"desired-level": "90/90"
 				}
 			},
+			{
+				"name": "Raiden Shogun",
+				"element": "Electro",
+				"current-level": "70/70",
+				"desired-level": "80/90",
+				"talents": {
+					"normal-current-level": 6,
+					"normal-desired-level": 6,
+					"skill-current-level": 8,
+					"skill-desired-level": 10,
+					"burst-current-level": 8,
+					"burst-desired-level": 10,
+				},
+				"weapon-type": "polearm",
+				"weapon": {
+					"name": "Engulfing Lightning",
+					"current-level": "80/80",
+					"desired-level": "90/90"
+				}
+			}
 		],
 		"inventory": {
 			"gold": 3000000,
