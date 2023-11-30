@@ -26,7 +26,7 @@ If I were to implement this myself I would use a json api that would track chara
 ```json
 [
 	{
-		"id": "1",
+		"id": 608340167,
 		"user": {
 			"name": "Serpag",
 			"account": "Main",
@@ -37,6 +37,7 @@ If I were to implement this myself I would use a json api that would track chara
 				"name": "Hu Tao",
 				"element": "Pyro",
 				"current-level": "80/90",
+				"ascension-level": 6,
 				"desired-level": "90/90",
 				"talents": {
 					"normal-current-level": 8,
@@ -57,6 +58,7 @@ If I were to implement this myself I would use a json api that would track chara
 				"name": "Furina",
 				"element": "Hydro",
 				"current-level": "50/60",
+				"ascension-level": 3,
 				"desired-level": "80/80",
 				"talents": {
 					"normal-current-level": 2,
@@ -77,6 +79,7 @@ If I were to implement this myself I would use a json api that would track chara
 				"name": "Raiden Shogun",
 				"element": "Electro",
 				"current-level": "70/70",
+				"ascension-level": 5,
 				"desired-level": "80/90",
 				"talents": {
 					"normal-current-level": 6,
@@ -97,14 +100,24 @@ If I were to implement this myself I would use a json api that would track chara
 		"inventory": {
 			"gold": 3000000,
 			"experience-books": { // Books to level characters
-				"tier-1": 25,
-				"tier-2": 55,
+				"tier-1": 5,
+				"tier-2": 250,
 				"tier-3": 420
 			},
+			"weapon-experience": { // Materials to level weapons
+				"tier-1": 40,
+				"tier-2": 100,
+				"tier-3": 500
+			},
+			"nectar": { // Hu Tao and Furina overworld material
+				"tier-1": 100,
+				"tier-2": 100,
+				"tier-3": 100
+			},
 			"pure-sacred-dewdrop": { // Furina Weapon Ascension Material
-				"tier-1": 26,
-				"tier-2": 34,
-				"tier-3": 10,
+				"tier-1": 12,
+				"tier-2": 17,
+				"tier-3": 4,
 				"tier-4": 2
 			}
 		}
@@ -118,7 +131,8 @@ Here is a image of the component breakdown.
 <img src="./images/">
 
 Below is the breakdown of the compoents of the images above in a nested hiearchy.
-* 
+1. Left Nav
+2. 
 
 ### Minimal Representation of State
 
