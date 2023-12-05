@@ -7,12 +7,11 @@ Here is the page I am going to be analyzing.
 <!-- Insert Page Images Here -->
 ![mockSource1](./images/mockSource1.png)
 ![mockSource2](./images/mockSource2.png)
-![mockSource3](./images/mockSource3.png)
 
 Functionality on the page:
 * Filtering based on the day of the week
 * Show/Hide the characters and weapons to display
-* Time based task tracker adding/editing/removing
+* Time based task tracker adding/editing/removing tasks
 * Time based Resin tracker that shows how much you have at a given moment
 * Required resources tracker based on what I can gather on the specified filtered day for my required characters and weapons
 * Nav (Left) that takes you to a different pages to look at the different tabs
@@ -36,9 +35,9 @@ If I were to implement this myself I would use a json api that would track chara
 			{
 				"name": "Hu Tao",
 				"element": "Pyro",
-				"current-level": "80/90",
+				"current-level": 80,
 				"ascension-level": 6,
-				"desired-level": "90/90",
+				"desired-level": 90,
 				"talents": {
 					"normal-current-level": 8,
 					"normal-desired-level": 10,
@@ -50,16 +49,17 @@ If I were to implement this myself I would use a json api that would track chara
 				"weapon-type": "polearm",
 				"weapon": {
 					"name": "Staff of Homa",
-					"current-level": "90/90",
-					"desired-level": "90/90"
+					"current-level": 90,
+					"ascension-level": 6,
+					"desired-level": 90
 				}
 			},
 			{
 				"name": "Furina",
 				"element": "Hydro",
-				"current-level": "50/60",
+				"current-level": 50,
 				"ascension-level": 3,
-				"desired-level": "80/80",
+				"desired-level": 80,
 				"talents": {
 					"normal-current-level": 2,
 					"normal-desired-level": 10,
@@ -71,16 +71,17 @@ If I were to implement this myself I would use a json api that would track chara
 				"weapon-type": "sword",
 				"weapon": {
 					"name": "Splendor of Tranquil Waters",
-					"current-level": "70/70",
-					"desired-level": "90/90"
+					"current-level": 70,
+					"ascension-level": 5,
+					"desired-level": 90
 				}
 			},
 			{
 				"name": "Raiden Shogun",
 				"element": "Electro",
-				"current-level": "70/70",
+				"current-level": 70,
 				"ascension-level": 5,
-				"desired-level": "80/90",
+				"desired-level": 90,
 				"talents": {
 					"normal-current-level": 6,
 					"normal-desired-level": 6,
@@ -92,12 +93,13 @@ If I were to implement this myself I would use a json api that would track chara
 				"weapon-type": "polearm",
 				"weapon": {
 					"name": "Engulfing Lightning",
-					"current-level": "80/80",
-					"desired-level": "90/90"
+					"current-level": 80,
+					"ascension-level": 5,
+					"desired-level": 90
 				}
 			}
 		],
-		"inventory": {
+		"inventory": { // Not an exhaustive list of all the items in the game, only the ones that the characters have chosen to display use
 			"gold": 3000000,
 			"experience-books": { // Books to level characters
 				"tier-1": 5,
@@ -124,6 +126,11 @@ If I were to implement this myself I would use a json api that would track chara
 				"tier-2": 10,
 				"tier-3": 0
 			},
+			"tainted-water": { // Second Furina Weapon Overworld Material
+				"tier-1": 20,
+				"tier-2": 20,
+				"tier-3": 0
+			},
 			"tartaglia-material": { // Weekly Boss Material
 				"material-1": 2, // Tusk of Monoceros Caeli
 				"material-2": 7, // Shard of a Foul Legacy - Hu Tao's Material
@@ -139,6 +146,7 @@ If I were to implement this myself I would use a json api that would track chara
 				"material-2": 4, // Lightless Eye of the Maelstrom
 				"material-3": 3 // Lightless Mass - Furina Material
 			},
+
 			"pure-sacred-dewdrop": { // Furina Weapon Ascension Material
 				"tier-1": 12,
 				"tier-2": 17,
