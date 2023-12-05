@@ -114,6 +114,31 @@ If I were to implement this myself I would use a json api that would track chara
 				"tier-2": 100,
 				"tier-3": 100
 			},
+			"handguard": { // Raiden Shogun Overworld Material
+				"tier-1": 0,
+				"tier-2": 0,
+				"tier-3": 0
+			},
+			"chunk": { // Furina Weapon Overworld Material
+				"tier-1": 10,
+				"tier-2": 10,
+				"tier-3": 0
+			},
+			"tartaglia-material": { // Weekly Boss Material
+				"material-1": 2, // Tusk of Monoceros Caeli
+				"material-2": 7, // Shard of a Foul Legacy - Hu Tao's Material
+				"material-3": 4 // Shadow of the Warrior
+			},
+			"signora-material": { // Weekly Boss Material
+				"material-1": 3, // Molten Moment - Raiden Shogun Material
+				"material-2": 5, // Hellfire Butterfly
+				"material-3": 4 // Ashen Heart
+			},
+			"whale-material": { // Weekly Boss Material
+				"material-1": 3, // Lightless Silk String
+				"material-2": 4, // Lightless Eye of the Maelstrom
+				"material-3": 3 // Lightless Mass - Furina Material
+			},
 			"pure-sacred-dewdrop": { // Furina Weapon Ascension Material
 				"tier-1": 12,
 				"tier-2": 17,
