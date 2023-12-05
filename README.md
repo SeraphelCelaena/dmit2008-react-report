@@ -155,9 +155,38 @@ Here is a image of the component breakdown.
 <!-- Insert images here -->
 <img src="./images/">
 
-Below is the breakdown of the compoents of the images above in a nested hiearchy.
-1. Left Nav
-2. 
+Below is the breakdown of the components of the images above in a nested hiearchy.
+* The Entire Application
+  * Left Nav - Nav Prop
+    * Navigation Buttons
+  * Planner Page
+    * Weekday Selector
+    * Character Filter
+      * Individual Characters
+    * Task Tracker
+      * Add New Task
+      * Current Tasks
+      * Finished Tasks
+    * Resin Tracker
+      * Buttons to modify how much resin you currently have to adjust the time until full
+    * Interaction Buttons
+      * Settings
+      * Refresh Planner
+      * Custom requirements
+    * Resource Tracker
+      * 0 Resin (Exploration) Resources
+      * 20 Resin Resources
+      * 40 Resin Resources
+      * 30/60 Resin Resources
+
+And inside each individual resource tracker is a singular resource that you are short of, and the characters that need them to get stronger.
+* Resource Tracker
+  * Items Needed
+    * Tiers of items
+  * Characters that need this specific resource
+
+You can click on the individual character to bring up a menu, in which you can set the current and desired values of their level, talents, and weapon.
+
 
 ### Minimal Representation of State
 
