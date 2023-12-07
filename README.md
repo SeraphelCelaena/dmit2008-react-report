@@ -146,7 +146,50 @@ If I were to implement this myself I would use a json api that would track chara
 				"material-2": 4, // Lightless Eye of the Maelstrom
 				"material-3": 3 // Lightless Mass - Furina Material
 			},
-
+			"boss-items": {
+				"storm-beads": 16, // Raiden Shogun boss Material
+				"water-that-failed": 32 // Furina boss Material
+			},
+			"Gems": [
+				{
+					"hydro": { // Furina Ascension Gem
+						"tier-1": 4,
+						"tier-2": 4,
+						"tier-3": 4,
+						"tier-4": 4
+					}
+				},
+				{
+					"electro": { // Raiden Shogun Ascension Gem
+						"tier-1": 4,
+						"tier-2": 4,
+						"tier-3": 4,
+						"tier-4": 4
+					}
+				}
+			],
+			"diligence-book": { // Hu Tao Talent book
+				"tier-1": 40,
+				"tier-2": 40,
+				"tier-3": 40
+			},
+			"light-book": { // Raiden Shogun Talent Book
+				"tier-1": 30,
+				"tier-2": 40,
+				"tier-3": 20
+			},
+			"justice-book": { // Furina Talent Book
+				"tier-1": 0,
+				"tier-2": 0,
+				"tier-3": 0
+			},
+			"crown": 6, // To get talents to lvl 10
+			"masks": { // Raiden Shogun Weapon Ascension Material
+				"tier-1": 0,
+				"tier-2": 0,
+				"tier-3": 0,
+				"tier-4": 0
+			},
 			"pure-sacred-dewdrop": { // Furina Weapon Ascension Material
 				"tier-1": 12,
 				"tier-2": 17,
@@ -157,45 +200,61 @@ If I were to implement this myself I would use a json api that would track chara
 	}
 ]
 ```
+And somewhere would be a list of items that each character needs and the amount of items needed for each level of the characters, talents and weapons.
 
 ### Break the UI into a Component Hierarchy
 Here is a image of the component breakdown.
 <!-- Insert images here -->
-<img src="./images/">
+![Highlighted Mock 1](./images/highlighted1.png)
+![Highlighted Mock 2](./images/highlighted2.png)
 
 Below is the breakdown of the components of the images above in a nested hiearchy.
-* The Entire Application
-  * Left Nav - Nav Prop
-    * Navigation Buttons
-  * Planner Page
-    * Weekday Selector
-    * Character Filter
-      * Individual Characters
-    * Task Tracker
+* The Entire Application (Pink)
+  * Left Nav (Black) - Nav Prop
+    * Navigation Buttons (Gray)
+  * Planner Page (Dark Gray)
+    * Weekday Selector (Light Gray)
+    * Character Filter (Light Pink)
+      * Individual Characters (Dark Pink) - Icon Prop
+    * Task Tracker (Green)
       * Add New Task
       * Current Tasks
       * Finished Tasks
-    * Resin Tracker
+    * Resin Tracker (Light Blue)
       * Buttons to modify how much resin you currently have to adjust the time until full
-    * Interaction Buttons
+    * Interaction Buttons (Blue)
       * Settings
       * Refresh Planner
       * Custom requirements
-    * Resource Tracker
-      * 0 Resin (Exploration) Resources
-      * 20 Resin Resources
-      * 40 Resin Resources
-      * 30/60 Resin Resources
+    * Resource Tracker (Yellow) - Resource Props
+      * 0 Resin (Exploration) Resources (Orange) - 0 Resin Resources
+      * 20 Resin Resources (Light Yellow) - 20 Resin Resources
+      * 40 Resin Resources (Puke Green) - 40 Resin Resources
+      * 30/60 Resin Resources (Dark Red) - 30/60 Resin Resources
 
 And inside each individual resource tracker is a singular resource that you are short of, and the characters that need them to get stronger.
-* Resource Tracker
-  * Items Needed
-    * Tiers of items
-  * Characters that need this specific resource
+
+![Resource Tracker](./images/ResourceTracker.png)
+* Resource Tracker (Red)
+  * Resourse Origin (Black)
+  * Resin Needed (Light Blue)
+  * Items Needed (Yellow)
+    * Tiers of items (Orange)
+  * Characters that need this specific resource (Gray)
+    * Individual Characters (White)
 
 You can click on the individual character to bring up a menu, in which you can set the current and desired values of their level, talents, and weapon.
 
 
 ### Minimal Representation of State
+Based on teh functionality above here's the minimal representation of state:
+* The Resin tracker has a useEffect on the first number (in this case 64) where you can change it to better reflect the current amount of resin you have right now
+* The Resin tracker has a useEffect on it's buttons where if you press them you change the current resin value.
+* The Resource tracker lists have a useState where it will store all of the resources you need and the characters that need them
+* Each resource has a useEffect on it where it detects if it has been changed, and then changes the displayed reources required.
+* I did not include character editing because you can do that on another page that is more dedicated to adding and removing characters.
+
+### Static Mockup
+I did not include a static mockup as I was too busy to make one.
 
 
